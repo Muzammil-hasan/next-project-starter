@@ -1,0 +1,75 @@
+@mixin font-size($size) {
+  @if $size == h1 {
+    font-size: 5.653rem;
+  } @else if $size == h2 {
+    font-size: 3.998rem;
+  } @else if $size == h3 {
+    font-size: 2.827rem;
+  } @else if $size == h4 {
+    font-size: 1.999rem;
+  } @else if $size == h5 {
+    font-size: 1.414rem;
+  } @else if $size == h6 {
+    font-size: 1.15rem;
+  } @else if $size == p {
+    font-size: 1rem;
+  } @else if $size == small {
+    font-size: 0.8rem;
+  } @else if $size == x-small {
+    font-size: 0.7rem;
+  } @else if $size == xx-small {
+    font-size: 0.5rem;
+  }
+}
+
+@mixin device($point) {
+  @if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == mobileAndTablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  } @else if $point == desktopAndTablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
+
+@mixin flex(
+  $justify-content: center,
+  $align-items: center,
+  $wrap: wrap,
+  $direction: row,
+  $type: flex
+) {
+  display: $type;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+}
+
+@mixin hide-scrollbar() {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+
+@mixin inline-list() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

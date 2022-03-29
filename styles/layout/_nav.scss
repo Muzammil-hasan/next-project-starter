@@ -1,0 +1,7 @@
+.header_nav {
+  // Header's nav style
+
+  @include device(mobileAndTablet /* Change devices go to mixins for name */) {
+    // Media query here
+  }
+}

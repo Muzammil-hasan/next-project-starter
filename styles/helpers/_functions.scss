@@ -1,0 +1,46 @@
+@function easing($key) {
+  @if map-has-key($easing, $key) {
+    @return map-get($easing, $key);
+  }
+
+  @warn "Unknown '#{$key}' in $easing.";
+  @return null;
+}
+
+@function font($key) {
+  @if map-has-key($fonts, $key) {
+    @return map-get($fonts, $key);
+  }
+
+  @warn "Unknown '#{$key}' in $fonts.";
+  @return null;
+}
+
+@function padding($key) {
+  @if map-has-key($padding, $key) {
+    @return map-get($padding, $key);
+  }
+
+  @warn "Unknown '#{$key}' in $padding.";
+  @return null;
+}
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown '#{$key}' in $colors.";
+  @return null;
+}
+
+@function material-color($color-name, $color-variant: "500") {
+  $color_key: map-get($material-colors, $color-name);
+
+  @if map-has-key($color_key, $color-variant) {
+    @return map-get($color_key, $color-variant);
+  }
+
+  @warn "=> ERROR: COLOR NOT FOUND! <= | Your $color-name, $color-variant combination did not match any of the values in the $material-colors map.";
+  @return null;
+}

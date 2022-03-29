@@ -1,0 +1,7 @@
+.sidebar {
+  // Sidebar style
+
+  @include device(mobileAndTablet /* Change devices go to mixins for name */) {
+    // Media query here
+  }
+}

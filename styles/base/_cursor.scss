@@ -1,0 +1,51 @@
+.#{$global-prefix}_cursor {
+  position: absolute;
+  background: color(main);
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  z-index: 99;
+  user-select: none;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transform: translate(-3px, -3px);
+
+  &.bg-white {
+    @extend .bg-white;
+  }
+
+  @media (max-width: 500px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.#{$global-prefix}_follower {
+  position: absolute;
+  background: transparent;
+  border: 0.15em solid color(main);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  z-index: 99;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+  user-select: none;
+  pointer-events: none;
+  &.active {
+    transform: scale(1.5);
+    border: none;
+    background-color: color(text);
+    opacity: 0.1;
+  }
+
+  &.black-border {
+    border: 0.15em solid color(background);
+  }
+
+  @media (max-width: 500px) {
+    & {
+      display: none;
+    }
+  }
+}

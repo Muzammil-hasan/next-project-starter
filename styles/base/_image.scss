@@ -1,0 +1,15 @@
+.#{$global-prefix}_image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: transparent;
+  color: color(main);
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,111 @@
+.base_button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.#{$global-prefix}_button {
+  @include font-size(p);
+  @include flex(center, $type: inline-flex);
+  padding: 0.75em 3em;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+  transition: all 400ms easing(out-expo);
+  border-radius: 0.2em;
+  line-height: 1;
+  letter-spacing: 0.05em;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &--primary {
+    @extend .#{$global-prefix}_button;
+    background-color: color(main);
+    color: color(background);
+
+    &:hover {
+      background-color: darken(#fff, 5%);
+    }
+  }
+
+  &--secondary {
+    @extend .#{$global-prefix}_button;
+    background: none;
+    color: color(main);
+    border: 1px solid color(main);
+
+    &:hover {
+      background-color: rgba(color(text), 0.08);
+    }
+  }
+
+  &--small {
+    @include font-size(h6);
+    padding: 0.8em 1.25em;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}
+
+.#{$global-prefix}_button_icon {
+  @include flex(center);
+  border: 0;
+  cursor: pointer;
+  border-radius: 100%;
+
+  span {
+    width: 6em;
+    height: 6em;
+  }
+
+  svg {
+    width: 2.25em;
+    height: 2.25em;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.#{$global-prefix}_button-link {
+  @include font-size(p);
+  @include flex(flex-start);
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: all 400ms easing(out-expo);
+
+  svg {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    color: color(main);
+  }
+
+  &--primary {
+    @extend .#{$global-prefix}_button-link;
+    color: color(main);
+  }
+
+  &--secondary {
+    @extend .#{$global-prefix}_button-link;
+    color: color(text);
+  }
+}
