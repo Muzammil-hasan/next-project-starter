@@ -6,40 +6,40 @@
 /*--------------------------------------------------------------
 # Import Modules
 --------------------------------------------------------------*/
-@import "normalize/normalize";
+@import 'normalize/normalize';
 
 /*--------------------------------------------------------------
 # Helpers
 --------------------------------------------------------------*/
-@import "helpers/functions";
-@import "helpers/variables";
-@import "helpers/helpers";
+@import 'helpers/functions';
+@import 'helpers/variables';
+@import 'helpers/helpers';
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-@import "base";
+@import 'base';
 
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-@import "layout/header";
-@import "layout/nav";
-@import "layout/mobile-nav";
-@import "layout/footer";
+@import 'layout/header';
+@import 'layout/footer';
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "components/sidebar";
+@import 'components/nav';
+@import 'components/mobile-nav';
+@import 'components/sidebar';
 
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
-@import "sections/hero";
+@import 'sections/hero';
 
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-@import "pages/home";
-@import "pages/about";
+@import 'pages/home';
+@import 'pages/about';

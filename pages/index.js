@@ -6,11 +6,11 @@ export default function Home() {
       <Head>
         <title>Your project title</title>
         <meta name="description" content="Your project description" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/" /> {/* favicon link here */}
       </Head>
 
       <main>
-        <h1>Your next project starter</h1>
+        <h1 style={{ fontSize: '1rem' }}>Your next project starter</h1>
       </main>
     </div>
   );
